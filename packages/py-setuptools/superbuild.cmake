@@ -18,7 +18,7 @@ ExternalProject_Add(${EP_PROJECT}
     "-DBUILD_DIR:PATH=${EP_BINARY_DIR}"
     "-DCONFIG:INTERNAL=$<CONFIG>"
     "-DEP_SCRIPT_CONFIG:FILEPATH=${EP_SCRIPT_CONFIG}"
-    -P "${GENERIC_PYTHON_INSTALL}"
+    -P "${CMAKE_CURRENT_LIST_DIR}/install.cmake"
   DEPENDS
     ${EP_PROJECT}-prerequisites
 )
